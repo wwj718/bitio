@@ -20,10 +20,14 @@ def do_action(action):
 
 
 while True:
+    # http://microbit-challenges.readthedocs.io/en/latest/tutorials/accelerometer.html
     x = microbit.accelerometer.get_x()
     y = microbit.accelerometer.get_y()
+    # import IPython;IPython.embed()
 
+    # gesture = microbit.accelerometer.get_gestures()
     print(x,y)
+    # print("gesture:",gesture)
     if x < -300:
         print("left")
         action = "l"
